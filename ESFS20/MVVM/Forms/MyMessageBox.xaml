@@ -1,0 +1,16 @@
+﻿<Window x:Class="ESFS20.MVVM.Forms.MyMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="QuizContain" Height="150" Width="300" 
+        WindowStyle="none"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Grid Background="#101010">
+        <TextBlock TextWrapping="Wrap" x:Name="TbText" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Foreground="White" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Margin="10" HorizontalAlignment="Right" Content="OK" VerticalAlignment="Bottom" Width="80" Height="30" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Background="#333" Foreground="White" FontSize="14" Click="Apply_Click"></Button>
+    </Grid>
+</Window>

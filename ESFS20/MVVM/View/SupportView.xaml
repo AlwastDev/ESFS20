@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="ESFS20.MVVM.View.SupportView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModel="clr-namespace:ESFS20.MVVM.ViewModel"
+             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800" Background="Transparent">
+    <UserControl.DataContext>
+        <viewModel:MainViewModel/>
+    </UserControl.DataContext>
+    <Border Background="#191919" CornerRadius="20">
+        <StackPanel Margin="10">
+            <StackPanel>
+                <DockPanel>
+                    <TextBlock Text="Тех. Поддержка" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="30" Foreground="White" HorizontalAlignment="Left" Margin="0,0,0,20"></TextBlock>
+                    <DockPanel VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <Button Margin="5" Width="20" Height="20" Background="Transparent" BorderBrush="Transparent" FontSize="15" Foreground="White" Command ="{Binding Path=MinimizedCommand}">-</Button>
+                        <Button Margin="5" Width="20" Height="20" Background="Transparent" BorderBrush="Transparent" FontSize="15" Foreground="White" FontFamily="Arial" Command ="{Binding Path=ExitCommand}" >X</Button>
+                    </DockPanel>
+                </DockPanel>
+            </StackPanel>
+            <StackPanel Margin="0 50 0 0" HorizontalAlignment="Center">
+                <TextBlock FontFamily="Microsoft Sans Serif" FontSize="20" Foreground="White" FontWeight="SemiBold">Если вы нашли неисправности в ходе работы программы,</TextBlock>
+                <TextBlock FontFamily="Microsoft Sans Serif" FontSize="20" Foreground="White" FontWeight="SemiBold">просьба сообщить нам удобным вам способом.</TextBlock>
+                <StackPanel Height="15"></StackPanel>
+                <TextBlock FontFamily="Microsoft Sans Serif" FontSize="20" Foreground="White" FontWeight="SemiBold">Telegram:   @Allwast</TextBlock>
+                <StackPanel Height="15"></StackPanel>
+                <TextBlock FontFamily="Microsoft Sans Serif" FontSize="20" Foreground="White" FontWeight="SemiBold">Discord:    Alwast#6630</TextBlock>
+                <StackPanel Height="15"></StackPanel>
+                <TextBlock FontFamily="Microsoft Sans Serif" FontSize="20" Foreground="White" FontWeight="SemiBold">Телефон:    +380-95-35-01-736</TextBlock>
+                <StackPanel Height="15"></StackPanel>
+                <TextBlock FontFamily="Microsoft Sans Serif" FontSize="20" Foreground="White" FontWeight="SemiBold">Email:      sshapar13371@gmail.com</TextBlock>
+                <StackPanel Height="15"></StackPanel>
+                <TextBlock HorizontalAlignment="Right" FontFamily="Microsoft Sans Serif" FontSize="20" Foreground="White" FontWeight="SemiBold">С наилучшими пожеланиями, Команда Разработчиков!</TextBlock>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

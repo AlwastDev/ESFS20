@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net5.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<ApplicationIcon>Images\logo_panel.ico</ApplicationIcon>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Images\About.png" />
+	  <None Remove="Images\hatsker.png" />
+	  <None Remove="Images\Home.png" />
+	  <None Remove="Images\icon1.png" />
+	  <None Remove="Images\icon2.png" />
+	  <None Remove="Images\icon3.png" />
+	  <None Remove="Images\icon4.png" />
+	  <None Remove="Images\icon5.png" />
+	  <None Remove="Images\icon6.png" />
+	  <None Remove="Images\iconRefresh.png" />
+	  <None Remove="Images\kva.png" />
+	  <None Remove="Images\load.gif" />
+	  <None Remove="Images\logo.png" />
+	  <None Remove="Images\logo2.png" />
+	  <None Remove="Images\logo3.png" />
+	  <None Remove="Images\logo_panel.ico" />
+	  <None Remove="Images\myau.png" />
+	  <None Remove="Images\photo_2021-06-12_19-21-59.jpg" />
+	  <None Remove="Images\photo_2021-07-29_19-01-53.jpg" />
+	  <None Remove="Images\photo_2021-08-24_14-34-54.jpg" />
+	  <None Remove="Images\Settings.png" />
+	  <None Remove="Images\Theory.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Images\load.gif">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Images\logo_panel.ico" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Fonts\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\WpfDataBaseLibrary\WpfDataBaseLibrary.csproj" />
+	  <ProjectReference Include="..\WpfMethodsDataBaseLibrary\WpfMethodsDataBaseLibrary.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Resource Include="Images\About.png" />
+	  <Resource Include="Images\hatsker.png" />
+	  <Resource Include="Images\Home.png" />
+	  <Resource Include="Images\icon4.png" />
+	  <Resource Include="Images\icon5.png" />
+	  <Resource Include="Images\iconRefresh.png" />
+	  <Resource Include="Images\kva.png" />
+	  <Resource Include="Images\logo.png" />
+	  <Resource Include="Images\logo2.png" />
+	  <Resource Include="Images\logo3.png" />
+	  <Resource Include="Images\logo_panel.ico" />
+	  <Resource Include="Images\myau.png" />
+	  <Resource Include="Images\photo_2021-06-12_19-21-59.jpg" />
+	  <Resource Include="Images\photo_2021-07-29_19-01-53.jpg" />
+	  <Resource Include="Images\photo_2021-08-24_14-34-54.jpg" />
+	  <Resource Include="Images\Settings.png" />
+	  <Resource Include="Images\Theory.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="MVVM\Forms\MyDialogBox.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Properties\Settings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Properties\Settings.settings">
+	    <Generator>SettingsSingleFileGenerator</Generator>
+	    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Update="MVVM\Forms\MyDialogBox.xaml">
+	    <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+	    <SubType>Designer</SubType>
+	  </Page>
+	</ItemGroup>
+</Project>

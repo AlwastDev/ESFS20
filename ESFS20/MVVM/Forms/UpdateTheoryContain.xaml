@@ -1,0 +1,41 @@
+﻿<Window x:Class="ESFS20.MVVM.Forms.UpdateTheoryContain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="UpdateTheoryContain" Height="450" Width="800" 
+        WindowStyle="none"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border x:Name="BorderWindowUpdateTheoryContain" Background="#101010" CornerRadius="20">
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0" Grid.Column="0">
+                <TextBlock Text="Обновление теории" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="0,0,0,20"></TextBlock>
+                <DockPanel VerticalAlignment="Top" HorizontalAlignment="Right">
+                    <Button Margin="5" Width="20" Height="20" Background="Transparent" BorderBrush="Transparent" FontSize="15" Foreground="White" FontFamily="Arial" Click="CloseForm_Click" >X</Button>
+                </DockPanel>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Left" Width="700" Height="35" Grid.Row="1" Grid.Column="0">
+                <Label Width="150" Height="30" Content="Название темы:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                <TextBox x:Name="TbTitleTheory" VerticalContentAlignment="Center" Height="30" Background="#333" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Foreground="White" FontSize="15" Text=""></TextBox>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Left" Width="700" Grid.Row="2" Grid.Column="0">
+                <Label Margin="0 10" VerticalAlignment="Top" Width="150" Height="30" Content="Содержание темы:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                <RichTextBox x:Name="RtbTextTheory" VerticalScrollBarVisibility="Auto" MaxHeight="300" UndoLimit="50" Height="300" Background="#333" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Foreground="White" FontSize="15"></RichTextBox>
+            </DockPanel>
+            <Button Grid.Row="3" Grid.Column="0" Content="Обновить" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Background="#333" Foreground="White" Width="160" Height="30" FontSize="15" Click="BtnUpdate_Click"></Button>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,67 @@
+﻿<Window x:Class="ESFS20.MVVM.Forms.AddQuestionContain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="QuizContain" Height="450" Width="800" 
+        WindowStyle="none"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border x:Name="BorderWindowAddQuestionContain" Background="#101010" CornerRadius="20">
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0" Grid.Column="0">
+                <TextBlock Text="Добавление вопроса" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="0,0,0,20"></TextBlock>
+                <DockPanel VerticalAlignment="Top" HorizontalAlignment="Right">
+                    <Button Margin="5" Width="20" Height="20" Background="Transparent" BorderBrush="Transparent" FontSize="15" Foreground="White" FontFamily="Arial" Click="CloseForm_Click" >X</Button>
+                </DockPanel>
+            </DockPanel>
+            <StackPanel Margin="0 30 0 0" Width="700" Grid.Row="1" Grid.Column="0">
+                <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Label Width="150" Height="30" Content="Название вопроса:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                    <TextBox Width="550" x:Name="TbTitleQuestion" VerticalContentAlignment="Center" Height="30" Background="#333" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Foreground="White" FontSize="15" Text=""></TextBox>
+                </DockPanel>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right" Margin="30 30 0 0">
+                    <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Label Width="210" Height="30" Content="Название первого ответа:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                        <TextBox Width="450" x:Name="TbTitleAnswer1" VerticalContentAlignment="Center" Height="30" Background="#333" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Foreground="White" FontSize="15" Text=""></TextBox>
+                    </DockPanel>
+                    <DockPanel Margin="0 30 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Label Width="210" Height="30" Content="Название второго ответа:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                        <TextBox Width="450" x:Name="TbTitleAnswer2" VerticalContentAlignment="Center" Height="30" Background="#333" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Foreground="White" FontSize="15" Text=""></TextBox>
+                    </DockPanel>
+                    <DockPanel Margin="0 30 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Label Width="210" Height="30" Content="Название третьего ответа:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                        <TextBox Width="450" x:Name="TbTitleAnswer3" VerticalContentAlignment="Center" Height="30" Background="#333" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Foreground="White" FontSize="15" Text=""></TextBox>
+                    </DockPanel>
+                </StackPanel>
+                <DockPanel Margin="0 30 0 0" HorizontalAlignment="Center">
+                    <Label Width="200" Height="30" Content="Правильный ответ:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                    <DockPanel Margin="0 0 10 0">
+                        <Label Width="25" Height="30" Content="1:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                        <CheckBox VerticalAlignment="Center" x:Name="CbAnswerOne"></CheckBox>
+                    </DockPanel>
+                    <DockPanel Margin="0 0 10 0">
+                        <Label Width="25" Height="30" Content="2:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                        <CheckBox VerticalAlignment="Center" x:Name="CbAnswerTwo"></CheckBox>
+                    </DockPanel>
+                    <DockPanel Margin="0 0 10 0">
+                        <Label Width="25" Height="30" Content="3:" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" FontSize="15" VerticalContentAlignment="Center" Foreground="White"></Label>
+                        <CheckBox VerticalAlignment="Center" x:Name="CbAnswerThree"></CheckBox>
+                    </DockPanel>
+                </DockPanel>
+            </StackPanel>
+            <Button Grid.Row="2" Content="Добавить вопрос" Grid.Column="0" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Background="#333" Foreground="White" Width="160" Height="30" FontSize="15" Click="BtnAddQuestion_Click"></Button>
+        </Grid>
+    </Border>
+</Window>

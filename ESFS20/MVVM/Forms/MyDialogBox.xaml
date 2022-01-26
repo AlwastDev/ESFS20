@@ -1,0 +1,20 @@
+﻿<Window x:Class="ESFS20.MVVM.Forms.MyDialogBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="QuizContain" Height="150" Width="300" 
+        WindowStyle="none"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Grid Background="#101010">
+        <TextBlock TextWrapping="Wrap" x:Name="TbText" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Foreground="White" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <DockPanel Width="200" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button Margin="10" Content="OK" Width="80" Height="30" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Background="#333" Foreground="White" FontSize="14" Click="OK_Click"></Button>
+            <Button Margin="10" Content="Cancel" Width="80" Height="30" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Background="#333" Foreground="White" FontSize="14" Click="Cancel_Click"></Button>
+        </DockPanel>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="ESFS20.MVVM.View.EditTheoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModel="clr-namespace:ESFS20.MVVM.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewModel:MainViewModel/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" Value="#101010" />
+        </Style>
+    </UserControl.Resources>
+    <Border Background="#191919" CornerRadius="20">
+        <StackPanel Margin="10">
+            <StackPanel>
+                <DockPanel>
+                    <TextBlock Text="Редактор теорий" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Foreground="White" FontSize="30" HorizontalAlignment="Left" Margin="0,0,0,20"></TextBlock>
+                    <DockPanel VerticalAlignment="Top" HorizontalAlignment="Right">
+                        <Button Margin="5" Width="20" Height="20" Background="Transparent" BorderBrush="Transparent" FontSize="15" Foreground="White" Command ="{Binding Path=MinimizedCommand}">-</Button>
+                        <Button Margin="5" Width="20" Height="20" Background="Transparent" BorderBrush="Transparent" FontSize="15" Foreground="White" FontFamily="Arial" Command ="{Binding Path=ExitCommand}" >X</Button>
+                    </DockPanel>
+                </DockPanel>
+            </StackPanel>
+            <DataGrid MaxWidth="650" Height="320" Width="650" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" VerticalGridLinesBrush="#111111" HorizontalGridLinesBrush="#111111" BorderBrush="#111111" HeadersVisibility="Column" FontSize="15" Foreground="White" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" RowBackground="#111111" AlternatingRowBackground="#111111" Background="#191919" x:Name="DgvEditTheory" IsReadOnly="True"></DataGrid>
+            <StackPanel Height="30"></StackPanel>
+            <DockPanel HorizontalAlignment="Center">
+                <Button HorizontalAlignment="Left" Margin="0 0 20 0" Content="Добавить" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Background="#333" Foreground="White" Width="160" Height="30" FontSize="15" Click="BtnAdd_Click"></Button>
+                <Button HorizontalAlignment="Center" Margin="0 0 20 0" Content="Обновить" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Background="#333" Foreground="White" Width="160" Height="30" FontSize="15" Click="BtnUpdate_Click"></Button>
+                <Button HorizontalAlignment="Right" Content="Удалить" FontFamily="Microsoft Sans Serif" FontWeight="SemiBold" Background="#333" Foreground="White" Width="160" Height="30" FontSize="15" Click="BtnDelete_Click"></Button>
+            </DockPanel>
+        </StackPanel>
+    </Border>
+</UserControl>
